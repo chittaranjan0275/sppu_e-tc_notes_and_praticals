@@ -1,0 +1,375 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: mod_25.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mod_25.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mod_25"
+Output Format                      : NGC
+Target Device                      : xc3s250e-5-pq208
+
+---- Source Options
+Top Module Name                    : mod_25
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx/42408_VLSI/mod_25/mod_25.vhd" in Library work.
+Entity <mod_25> compiled.
+Entity <mod_25> (Architecture <mod_25_arch>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <mod_25> in library <work> (architecture <mod_25_arch>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <mod_25> in library <work> (Architecture <mod_25_arch>).
+Entity <mod_25> analyzed. Unit <mod_25> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <mod_25>.
+    Related source file is "C:/Xilinx/42408_VLSI/mod_25/mod_25.vhd".
+INFO:Xst - Possible FSM for signal Q_temp but both ACLR and ASET.
+    Found 5-bit register for signal <Q_temp>.
+    Found 6-bit comparator greater for signal <Q_temp$cmp_gt0000> created at line 68.
+    Found 6-bit comparator less for signal <Q_temp$cmp_lt0000> created at line 59.
+    Found 5-bit addsub for signal <Q_temp$share0000>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <mod_25> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 5-bit addsub                                          : 1
+# Registers                                            : 1
+ 5-bit register                                        : 1
+# Comparators                                          : 2
+ 6-bit comparator greater                              : 1
+ 6-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 5-bit addsub                                          : 1
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+# Comparators                                          : 2
+ 6-bit comparator greater                              : 1
+ 6-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mod_25> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mod_25, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : mod_25.ngr
+Top Level Output File Name         : mod_25
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 9
+
+Cell Usage :
+# BELS                             : 18
+#      LUT2                        : 1
+#      LUT3                        : 3
+#      LUT3_L                      : 1
+#      LUT4                        : 9
+#      LUT4_L                      : 1
+#      MUXF5                       : 3
+# FlipFlops/Latches                : 5
+#      FDCP                        : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 8
+#      IBUF                        : 3
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250epq208-5 
+
+ Number of Slices:                        8  out of   2448     0%  
+ Number of Slice Flip Flops:              5  out of   4896     0%  
+ Number of 4 input LUTs:                 15  out of   4896     0%  
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    158     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK_in                             | BUFGP                  | 5     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+Pr                                 | IBUF                   | 5     |
+RST_in                             | IBUF                   | 5     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 3.876ns (Maximum Frequency: 257.968MHz)
+   Minimum input arrival time before clock: 2.896ns
+   Maximum output required time after clock: 4.476ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_in'
+  Clock period: 3.876ns (frequency: 257.968MHz)
+  Total number of paths / destination ports: 51 / 5
+-------------------------------------------------------------------------
+Delay:               3.876ns (Levels of Logic = 3)
+  Source:            Q_temp_1 (FF)
+  Destination:       Q_temp_2 (FF)
+  Source Clock:      CLK_in rising
+  Destination Clock: CLK_in rising
+
+  Data Path: Q_temp_1 to Q_temp_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q             8   0.514   0.795  Q_temp_1 (Q_temp_1)
+     LUT2:I0->O            1   0.612   0.360  Q_temp_mux0003<2>126_SW0 (N6)
+     LUT4_L:I3->LO         1   0.612   0.103  Q_temp_mux0003<2>126 (Q_temp_mux0003<2>126)
+     LUT4:I3->O            1   0.612   0.000  Q_temp_mux0003<2>1114 (Q_temp_mux0003<2>)
+     FDCP:D                    0.268          Q_temp_2
+    ----------------------------------------
+    Total                      3.876ns (2.618ns logic, 1.258ns route)
+                                       (67.5% logic, 32.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_in'
+  Total number of paths / destination ports: 7 / 5
+-------------------------------------------------------------------------
+Offset:              2.896ns (Levels of Logic = 3)
+  Source:            u_d (PAD)
+  Destination:       Q_temp_3 (FF)
+  Destination Clock: CLK_in rising
+
+  Data Path: u_d to Q_temp_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.106   0.632  u_d_IBUF (u_d_IBUF)
+     LUT4:I2->O            1   0.612   0.000  Q_temp_mux0003<1>1_F (N8)
+     MUXF5:I0->O           1   0.278   0.000  Q_temp_mux0003<1>1 (Q_temp_mux0003<1>)
+     FDCP:D                    0.268          Q_temp_3
+    ----------------------------------------
+    Total                      2.896ns (2.264ns logic, 0.632ns route)
+                                       (78.2% logic, 21.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_in'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              4.476ns (Levels of Logic = 1)
+  Source:            Q_temp_3 (FF)
+  Destination:       Q<3> (PAD)
+  Source Clock:      CLK_in rising
+
+  Data Path: Q_temp_3 to Q<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q            11   0.514   0.793  Q_temp_3 (Q_temp_3)
+     OBUF:I->O                 3.169          Q_3_OBUF (Q<3>)
+    ----------------------------------------
+    Total                      4.476ns (3.683ns logic, 0.793ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.36 secs
+ 
+--> 
+
+Total memory usage is 230780 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

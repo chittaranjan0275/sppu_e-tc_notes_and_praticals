@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body style="text-align:center;">
+<div class="parent">
+
+    <div class="child1">
+
+        <h3> Name: Chittaranjan Rathod </h3>
+        <h3> Roll No: 42457 </h3>
+        <h3> Batch : S8 Exp_No:08</h3>
+        <h3>ABC ID : 129879043197</h3>
+    </div>
+    <div class="child2">
+        <button id="demo">Red</button>
+        <button id="demo1">Cyan</button>
+        <button id="demo2">Blue</button>
+    </div>
+    <div class="child5">
+        Onfocus event handler: <input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()">
+    </div>
+</div>
+<script>
+    function focusFunction() {
+        document.getElementById("myInput").style.background = "yellow";
+    }
+
+    function blurFunction() {
+        document.getElementById("myInput").style.background = "red";
+    }
+</script>
+
+<script>
+    document.getElementById("demo").addEventListener("mouseover", mouseOver1);
+    document.getElementById("demo").addEventListener("mouseout", mouseOut);
+
+    document.getElementById("demo1").addEventListener("mouseover", mouseOver2);
+    document.getElementById("demo1").addEventListener("mouseout", mouseOut);
+
+    document.getElementById("demo2").addEventListener("mouseover", mouseOver3);
+    document.getElementById("demo2").addEventListener("mouseout", mouseOut);
+
+    function mouseOver1() {
+        document.bgColor = "red";
+    }
+
+    function mouseOver2() {
+        document.bgColor = "cyan";
+    }
+
+    function mouseOver3() {
+        document.bgColor = "blue";
+    }
+
+    function mouseOut() {
+        document.bgColor = "white";
+    }
+</script>
+</body>
+</html>

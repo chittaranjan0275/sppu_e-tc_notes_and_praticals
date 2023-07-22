@@ -1,0 +1,24 @@
+Running: /home/chittaranjan/opt/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/chittaranjan/opt/projects_dir/ModN/modn_testbench_isim_beh.exe -prj /home/chittaranjan/opt/projects_dir/ModN/modn_testbench_beh.prj work.modn_testbench 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/chittaranjan/opt/projects_dir/ModN/MOD_n.vhd" into library work
+Parsing VHDL file "/home/chittaranjan/opt/projects_dir/ModN/modn_testbench.vhd" into library work
+WARNING:HDLCompiler:1369 - "/home/chittaranjan/opt/projects_dir/ModN/modn_testbench.vhd" Line 84: Possible infinite loop; process does not have a wait statement
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 85056 KB
+Fuse CPU Usage: 820 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity MOD_N_Counter [mod_n_counter_default]
+Compiling architecture behavior of entity modn_testbench
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 6 VHDL Units
+Built simulation executable /home/chittaranjan/opt/projects_dir/ModN/modn_testbench_isim_beh.exe
+Fuse Memory Usage: 1180868 KB
+Fuse CPU Usage: 880 ms
+GCC CPU Usage: 1370 ms

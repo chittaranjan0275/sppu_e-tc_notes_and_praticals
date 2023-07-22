@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "C:/Xilinx/42408_VLSI/mod_25/mod_25.xst" -ofn "C:/Xilinx/42408_VLSI/mod_25/mod_25.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/42408_VLSI/mod_25/mod_25.xst" -ofn "C:/Xilinx/42408_VLSI/mod_25/mod_25.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/42408_VLSI/mod_25/mod_25.xst" -ofn "C:/Xilinx/42408_VLSI/mod_25/mod_25.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/42408_VLSI/mod_25/mod_25.xst" -ofn "C:/Xilinx/42408_VLSI/mod_25/mod_25.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/42408_VLSI/mod_25/mod_25.xst" -ofn "C:/Xilinx/42408_VLSI/mod_25/mod_25.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/42408_VLSI/mod_25/mod_25.xst" -ofn "C:/Xilinx/42408_VLSI/mod_25/mod_25.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/42408_VLSI/mod_25/mod_25.xst" -ofn "C:/Xilinx/42408_VLSI/mod_25/mod_25.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/42408_VLSI/mod_25/mod_25.xst" -ofn "C:/Xilinx/42408_VLSI/mod_25/mod_25.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mod_25.ucf -p xc3s250e-pq208-5 mod_25.ngc mod_25.ngd  
+map -intstyle ise -p xc3s250e-pq208-5 -cm area -ir off -pr off -c 100 -o mod_25_map.ncd mod_25.ngd mod_25.pcf 
+par -w -intstyle ise -ol high -t 1 mod_25_map.ncd mod_25.ncd mod_25.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml mod_25.twx mod_25.ncd -o mod_25.twr mod_25.pcf -ucf mod_25.ucf 
+bitgen -intstyle ise -f mod_25.ut mod_25.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mod_25.ucf -p xc3s250e-pq208-5 mod_25.ngc mod_25.ngd  
+map -intstyle ise -p xc3s250e-pq208-5 -cm area -ir off -pr off -c 100 -o mod_25_map.ncd mod_25.ngd mod_25.pcf 
+par -w -intstyle ise -ol high -t 1 mod_25_map.ncd mod_25.ncd mod_25.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml mod_25.twx mod_25.ncd -o mod_25.twr mod_25.pcf -ucf mod_25.ucf 
+bitgen -intstyle ise -f mod_25.ut mod_25.ncd 

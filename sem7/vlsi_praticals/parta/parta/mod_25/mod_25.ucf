@@ -1,0 +1,9 @@
+NET "RST_in" LOC = P204;
+NET "Pr" LOC = P184;
+NET "CLK_in" LOC = P132;
+NET "u_d" LOC = P205;
+NET "Q[4]" LOC = P193;
+NET "Q[3]" LOC = P189;
+NET "Q[2]" LOC = P190;
+NET "Q[1]" LOC = P186;
+NET "Q[0]" LOC = P187;

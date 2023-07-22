@@ -1,0 +1,140 @@
+<html>
+<head>
+
+    <script>
+        function validate() {
+            if (document.StudentRegistration.textnames.value == "") {
+                alert("Please provide your Name!");
+                document.StudentRegistration.textnames.focus();
+                return false;
+            }
+            if (document.StudentRegistration.city.value == "") {
+                alert("Please provide the name of the city !");
+                document.StudentRegistration.city.focus();
+                return false;
+            }
+            if (document.StudentRegistration.State.value == "") {
+                alert("Please provide the name of the state!");
+                document.StudentRegistration.State.focus();
+                return false;
+            }
+            if ((document.StudentRegistration.Gender.value != "Male" &&
+                document.StudentRegistration.Gender.value != "Female" &&
+                document.StudentRegistration.Gender.value != "female" &&
+                document.StudentRegistration.Gender.value != "Other" &&
+                document.StudentRegistration.Gender.value != "other" &&
+                document.StudentRegistration.Gender.value != "male")) {
+                alert("Please provide valid gender!");
+                document.StudentRegistration.Gender.focus();
+                return false;
+            }
+            if (document.StudentRegistration.Address.value == "") {
+                alert("Please provide your address!");
+                document.StudentRegistration.Address.focus();
+                return false;
+            }
+            var email = document.StudentRegistration.emailid.value;
+            atpos = email.indexOf("@");
+            dotpos = email.lastIndexOf(".");
+            var idx = email.indexOf('@gmail.com')
+            if (idx > -1) {
+
+                if (email == "" || atpos < 1 || (dotpos - atpos < 2)) {
+                    alert("Please enter correct email ID")
+                    document.StudentRegistration.emailid.focus();
+                    return false;
+                }
+                if (document.StudentRegistration.mobileno.value == "" ||
+                    isNaN(document.StudentRegistration.mobileno.value) ||
+                    document.StudentRegistration.mobileno.value.length != 10) {
+                    alert("Please provide a Mobile No in the format 123.");
+                    document.StudentRegistration.mobileno.focus();
+                    return false;
+                }
+                alert("Entered Details Updated Successfully !!!!")
+                return (true);
+            } else {
+                alert("Please enter correct email ID ")
+            }
+        }
+    </script>
+</head>
+<body style="text-align: center">
+
+<h3> Name: Chittaranjan Rathod </h3>
+<h3> Roll No: 42457 </h3>
+<h3> Batch : S8 Exp_No:09</h3>
+<h3>ABC ID : 129879043197</h3>
+<div class="container" style="text-align:center">
+    <form action="#" name="StudentRegistration" onsubmit="return(validate());" style="text-align: center">
+        <br>
+        <div>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="textnames" id="textname" size="30"></td>
+            </tr>
+        </div>
+        <br>
+        <div>
+            <tr>
+                <td>EmailId(yahoo mail only)</td>
+                <td><input type="text" name="emailid" id="emailid" size="30"></td>
+            </tr>
+        </div>
+        <br>
+        <div>
+            <tr>
+                <td>MobileNo</td>
+                <td><input type="text" name="mobileno" id="mobileno" size="30"></td>
+            </tr>
+        </div>
+        <br>
+        <div>
+            <!--            <tr>-->
+            <!--                <td>Gender</td>-->
+            <!--                <td><input type="text" name="Gender" id="Gender" size="30"></td>-->
+            <!--            </tr>-->
+            <label for="Gender">Gender</label>
+
+            <select name="Gender" id="Gender">
+                <option value="Male">Male</option>
+                <option value=Female">Female</option>
+                <option value="Other">Other</option>
+
+            </select>
+        </div>
+
+        <br>
+        <div>
+            <tr>
+                <td>State</td>
+                <td><input type="text" name="State" id="State" size="30"></td>
+            </tr>
+
+        </div>
+        <br>
+        <div>
+            <tr>
+
+                <td>City</td>
+                <td><input type="text" name="city" id="city" size="30"></td>
+            </tr>
+        </div>
+        <br>
+        <div>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" name="Address" id="Address" size="30"></td>
+            </tr>
+        </div>
+        <br>
+        <div>
+            <tr>
+                <td><input type="reset"></td>
+                <td colspan="2"><input type="submit" value="Submit Form"/></td>
+            </tr>
+        </div>
+    </form>
+</div>
+</body>
+</html>

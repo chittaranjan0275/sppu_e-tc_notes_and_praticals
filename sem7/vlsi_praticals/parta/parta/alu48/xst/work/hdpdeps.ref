@@ -1,0 +1,6 @@
+V3 3
+FL D:/sem7/VLSI/alu48/alu48.vhd 2022/09/16.18:42:49 P.20131013
+EN work/alu48 1663333991 FL D:/sem7/VLSI/alu48/alu48.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/alu48/alu48_arch 1663333992 \
+      FL D:/sem7/VLSI/alu48/alu48.vhd EN work/alu48 1663333991

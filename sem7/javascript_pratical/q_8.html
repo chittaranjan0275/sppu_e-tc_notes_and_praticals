@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Name - Chittaranjan Rathod<br>
+    ABC ID: 129-879-043-197<br>
+    Roll no-42457<br>
+    Batch - S8<br>
+    Class-BE8
+</h3>
+<form id="panda" method="post">
+    <input type="text" placeholder="enter the full name"/>
+    <button type="submit">submit</button>
+</form>
+<script>
+    var my_func = function (event) {
+        alert("are you sure to submit the form ");
+        event.preventDefault();
+    };
+    var form = document.getElementById("panda");
+    form.addEventListener("submit", my_func, true);
+</script>
+
+</body>
+</html>

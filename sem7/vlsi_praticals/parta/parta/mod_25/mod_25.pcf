@@ -1,0 +1,17 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Sep 20 16:46:24 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "CLK_in" LOCATE = SITE "P132" LEVEL 1;
+COMP "Q<0>" LOCATE = SITE "P187" LEVEL 1;
+COMP "Q<1>" LOCATE = SITE "P186" LEVEL 1;
+COMP "Q<2>" LOCATE = SITE "P190" LEVEL 1;
+COMP "Q<3>" LOCATE = SITE "P189" LEVEL 1;
+COMP "Q<4>" LOCATE = SITE "P193" LEVEL 1;
+COMP "u_d" LOCATE = SITE "P205" LEVEL 1;
+COMP "RST_in" LOCATE = SITE "P204" LEVEL 1;
+COMP "Pr" LOCATE = SITE "P184" LEVEL 1;
+NET "CLK_in_BUFGP/IBUFG" BEL "CLK_in_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

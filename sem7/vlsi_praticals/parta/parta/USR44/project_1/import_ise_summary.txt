@@ -1,0 +1,180 @@
+*******************************************************************************
+*
+*                      IMPORT XISE SUMMARY REPORT
+*
+*                       (import_ise_summary.txt)
+*
+*  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ON THE DATA THAT
+*  WAS PARSED FROM THE ISE PROJECT AND IMPORTED INTO THE CURRENT PROJECT.
+*
+*
+* The report is divided into following three sections:-
+*
+* Section (1) - ISE PROJECT INFORMATION
+*
+*  This section provides the details of the ISE project that was imported
+*
+* Section (2) - EXCEPTIONS
+*
+*  This section summarizes the ISE project data that was either not imported or
+*  not mapped into the current project
+*
+* Section (3) - MAPPED DATA
+*
+*  This section summarizes the PlanAhead project information that was imported
+*  from the ISE project data
+*
+*******************************************************************************
+
+Section (1) - ISE PROJECT INFORMATION
+-------------------------------------
+
+The following items describes the information about the ISE project that was imported:-
+
+Project Name    = USR44
+Project File    = D:/sem7/42410/USR44/USR44.xise
+Project Version = 14.7
+Device Family   = Spartan3E
+Part Name       = xc3s250e-5-pq208
+
+
+Section (2) - EXCEPTIONS
+------------------------
+
+The following sub-sections describes the list of items that were NOT mapped from the
+XISE file contents into the current project:-
+
+Section (2.1) - Missing Sources
+-------------------------------
+None
+
+
+Section (2.2) - Unknown Sources
+-------------------------------
+None
+
+
+Section (2.3) - IP Import Issues
+--------------------------------
+None
+
+
+Section (2.4) - Unknown Properties
+----------------------------------
+
+The following ISE properties were not mapped into the current project:-
+
+Note: The "Property Specification in Project File" property in the ISE project was set to "Store non-default values only".
+      To make the ISE default properties available for import into PlanAhead, please set the value to "Store all values" in
+      ISE Project Design Properties and create a new project.
+
+<ISE Property Name>  <ISE Property Value>
+None
+
+
+Section (3) - MAPPED DATA
+-------------------------
+
+The following sub-sections describes the list of items that were imported from the
+ISE properties and sources and mapped into the current project:-
+
+Section (3.1) - Target Device
+-----------------------------
+
+Default Part = xc3s250epq208-5
+Family       = spartan3e
+Package      = pq208
+Speed Grade  = -5
+
+
+Section (3.2) - Filesets
+------------------------
+
+<sources_1>
+FILESET_TYPE   = DesignSrcs
+TOP            = USR44
+DESIGN_MODE    = RTL
+VERILOG_DIR    = 
+VERILOG_DEFINE = 
+VHDL_GENERICS  = 
+
+File(s):-
+NAME      = USR44.vhd
+FILE PATH = D:/sem7/42410/USR44/USR44.vhd
+FILE_TYPE = VHDL
+LIBRARY   = work
+
+
+<constrs_1>
+FILESET_TYPE   = Constrs
+
+Note: During the import operation, any constraint file(s) that are found in the ISE project will be added to the current PlanAhead project.
+      However, please note that none of these files will be automatically marked as a "Target Constraint File". To set a constraint file
+      as target, select the file in the GUI "Sources" window, right-click on this file and then select "Set Target UCF". Alternatively,
+      the target constraint file can be set using the "set_property target_constrs_file <filename> <fileset>" Tcl command.
+
+File(s):-
+None
+
+<sim_1>
+FILESET_TYPE   = SimulationSrcs
+
+File(s):-
+NAME      = USR44_TB.vhd
+FILE PATH = D:/sem7/42410/USR44/USR44_TB.vhd
+FILE_TYPE = VHDL
+LIBRARY   = work
+
+
+Section (3.3) - Design Runs(s)
+------------------------------
+
+<synth_1>
+FLOW      = XST 14
+PART      = xc3s250epq208-5
+SRCSET    = sources_1
+CONSTRSET = constrs_1
+STRATEGY  = PlanAhead Defaults
+
+Options:-
+                                                             
+<ISE Property Name>  <Step>  <Option>  <ISE Property Value>  <PlanAhead Mapped Value>
+None                                                         
+
+
+<impl_1>
+FLOW      = ISE 14
+PART      = xc3s250epq208-5
+SRCSET    = sources_1
+CONSTRSET = constrs_1
+STRATEGY  = ISE Defaults
+
+Options:-
+                                                             
+<ISE Property Name>  <Step>  <Option>  <ISE Property Value>  <PlanAhead Mapped Value>
+None                                                         
+                                                             
+<ISE Property Name>  <Step>  <Option>  <ISE Property Value>  <PlanAhead Mapped Value>
+None                                                         
+                                                             
+<ISE Property Name>  <Step>  <Option>  <ISE Property Value>  <PlanAhead Mapped Value>
+None                                                         
+                                                             
+<ISE Property Name>  <Step>  <Option>  <ISE Property Value>  <PlanAhead Mapped Value>
+None                                                         
+                                                             
+<ISE Property Name>  <Step>  <Option>  <ISE Property Value>  <PlanAhead Mapped Value>
+None                                                         
+
+
+<sim_1>
+TOP  = 
+SOURCE_SET  = sources_1
+
+Options:-
+                                                             
+<ISE Property Name>  <Step>  <Option>  <ISE Property Value>  <PlanAhead Mapped Value>
+None                                                         
+                                                             
+<ISE Property Name>  <Step>  <Option>  <ISE Property Value>  <PlanAhead Mapped Value>
+None                                                         

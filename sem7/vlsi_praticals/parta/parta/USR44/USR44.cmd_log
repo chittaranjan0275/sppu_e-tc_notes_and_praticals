@@ -1,0 +1,17 @@
+xst -intstyle ise -ifn "D:/sem7/42410/USR44/USR44.xst" -ofn "D:/sem7/42410/USR44/USR44.syr" 
+xst -intstyle ise -ifn "D:/sem7/42410/USR44/USR44.xst" -ofn "D:/sem7/42410/USR44/USR44.syr" 
+xst -intstyle ise -ifn "D:/sem7/42410/USR44/USR44.xst" -ofn "D:/sem7/42410/USR44/USR44.syr" 
+xst -intstyle ise -ifn "D:/sem7/42410/USR44/USR44.xst" -ofn "D:/sem7/42410/USR44/USR44.syr" 
+xst -intstyle ise -ifn "D:/sem7/42410/USR44/USR44.xst" -ofn "D:/sem7/42410/USR44/USR44.syr" 
+xst -intstyle ise -ifn "D:/sem7/42410/USR44/USR44.xst" -ofn "D:/sem7/42410/USR44/USR44.syr" 
+xst -intstyle ise -ifn "D:/sem7/42410/USR44/USR44.xst" -ofn "D:/sem7/42410/USR44/USR44.syr" 
+xst -intstyle ise -ifn "D:/sem7/42410/USR44/USR44.xst" -ofn "D:/sem7/42410/USR44/USR44.syr" 
+xst -intstyle ise -ifn "D:/sem7/42410/USR44/USR44.xst" -ofn "D:/sem7/42410/USR44/USR44.syr" 
+xst -intstyle ise -ifn "D:/sem7/42410/USR44/USR44.xst" -ofn "D:/sem7/42410/USR44/USR44.syr" 
+xst -intstyle ise -ifn "D:/sem7/42410/USR44/USR44.xst" -ofn "D:/sem7/42410/USR44/USR44.syr" 
+xst -intstyle ise -ifn "D:/sem7/42410/USR44/USR44.xst" -ofn "D:/sem7/42410/USR44/USR44.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc USR44.ucf -p xc3s250e-pq208-5 USR44.ngc USR44.ngd  
+map -intstyle ise -p xc3s250e-pq208-5 -cm area -ir off -pr off -c 100 -o USR44_map.ncd USR44.ngd USR44.pcf 
+par -w -intstyle ise -ol high -t 1 USR44_map.ncd USR44.ncd USR44.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml USR44.twx USR44.ncd -o USR44.twr USR44.pcf -ucf USR44.ucf 
+bitgen -intstyle ise -f USR44.ut USR44.ncd 

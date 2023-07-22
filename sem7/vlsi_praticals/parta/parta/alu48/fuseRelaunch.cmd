@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/chittaranjan/opt/projects_dir/alu48/alu48_isim_beh.exe" -prj "/home/chittaranjan/opt/projects_dir/alu48/alu48_beh.prj" "work.alu48" 
